@@ -1,0 +1,21 @@
+これは日本語文章です。\\
+Japanese Version
+
+* これはなに?
+  私が作成したemacs Lispの作品集
+* ファイル構造
+  load-pathの設定を簡略化するために、本体の =.el= ファイルを直下に置いています。
+  その他のファイル(それぞれのreadmeも含め)はそれぞれの作品名のフォルダにあります。
+* 使い方
+  お使いの =~/.emacs.d/init.el= または =.emacs= に
+  #+BEGIN_SRC emacs-lisp
+  (add-to-list 'load-path "~/.emacs.d/elisp/emacs-jisaku")
+  (require '使いたいもの)
+  #+END_SRC
+  を追加してください。("~/.emacs.d/elisp/emacs-jisaku"の部分は適宜変えてくだい。)
+
+  それぞれの使い方はそれぞれのREADMEを見て下さい。
+* ライセンス
+  GNU GPL v3です。詳しくは[[file:LICENSE][LICENCE]] にて\\
+  emacs作品はGNU GPLじゃなくちゃいけないのかよく分からない。
+

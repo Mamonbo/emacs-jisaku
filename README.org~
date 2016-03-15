@@ -1,0 +1,10 @@
+これは日本語文章です。
+Japanese Version
+
+* これはなに?
+  私が作成したemacs
+
+* ライセンス
+  GNU GPL v3です。詳しくは[[file:LICENSE][LICENCE]] のにて\\
+  emacs作品はGNU GPLじゃなくちゃいけないのかよく分からない。
++ SOMEDAY ライセンス周りを理解する。(もしかしたらライセンスを変更するかも)
