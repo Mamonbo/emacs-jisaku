@@ -1,0 +1,40 @@
+#+TITLE: asdf-input & aoeu-input
+
+* About
+  ホームポジションで数字の入力をする
+* 経緯
+  昔、私がemacsのビギナーで *Emacs 入門ガイド* を読んでいたとき、
+  #+BEGIN_VERSE
+画面毎の移動はできるようになりました。今度は、画面の中で、特定の場所に
+移動するための方法を憶えましょう。
+
+これにはいくつかのやり方があります。矢印キーを使うこともできますが、手
+をキーボード上の標準位置から大きく動かさずに、 C-p、C-b、C-f、C-n を使
+う方が効率的です。
+  #+END_VERSE
+  と書いてあり、なるほど、矢印キーに手を動かすのも面倒なのかと思った。
+  なら数字キーに手を伸ばすのも面倒だろうと思った。ついでに数字のキーを
+  叩くときは正確さに欠けていた。
+
+  さらに数字の入力はときどきに3文字ぐらいまとめてするので、何かしらのボタン
+  でモードを変えて、ホームポジションで入力できるようにすればよいのではないか
+  と考えた。
+
+* 使い方
+** QWERTY配列の場合
+  =~/.emacs.d/init.el= に
+  #+BEGIN_SRC emacs-lisp
+  (require 'asdf-input)
+  (define-key global-map (kbd "C-;") 'asdf-input)
+#+END_SRC
+;が小指の位置にあるので便利
+** Dvorak配列の場合
+  =~/.emacs.d/init.el= に
+  #+BEGIN_SRC emacs-lisp
+  (require 'aoeu-input)
+  (define-key global-map (kbd "C-'") 'aoeu-input)
+#+END_SRC
+を追加。(=C-'= が空いていたのでそこにしただけで割り当てるキーは任意)
+
+Cのコードを書いているときの記号の入力にも便利
+共存も可能
