@@ -1,0 +1,13 @@
+#+TITLE:伏せ字
+
+* About
+全ての二次創作関係者をemacserにしてしまうかもしれない機能
+
+文字の一部を伏せる
+* 経緯
+* 設定
+  =init.el= に ~(require 'fuseji)~ する
+* 使い方
+  以下の2つが使える
++ =M-x fuseji-string= 毎回伏せる部分が変わる
++ =M-x fuseji-string-fixed= 毎回伏せる部分が一定
