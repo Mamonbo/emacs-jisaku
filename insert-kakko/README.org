@@ -1,0 +1,32 @@
+#+TITLE: insert-kakko
+
+* About
+  開き括弧入力時、後続の文字から自動的に閉じ括弧を入れたり入れなかったり
+  する。
+
+  通常のskelton.elと違い、挿入する文字とキーが違っていても可能
+* 経緯
+  Dvorak配列に移行したとき角括弧が入力し辛いと気付いた。このことは
+  [[http://www.slideshare.net/shitaro2012/8rogy][清水15]] でも指摘されている。
+  さらにQWERTY配列では開き・閉じが上下と分かり易くなっている。
+
+  そのためQWERTY配列の角括弧の位置に近い形で入力出来る、それなりに使えるものを作った。
+* 設定
+  ~skelton.el~ を有効にして
+  以下を設定ファイルに書き込む
+    #+BEGIN_SRC emacs-lisp
+  (require 'insert-kakko)
+  (define-key global-map (kbd "C-=") 'insert-block-maybe)
+  (define-key global-map (kbd "C-c C-=") 'insert-nami-maybe)
+  
+(define-key global-map (kbd "C-`") 'insert-block-kokka)
+(define-key global-map (kbd "C-c C-`") 'insert-nami-kokka)
+
+#+END_SRC
+を追加。(空いている好きなキーに割り当てる またDvorak化の仕方により微妙に記号の配列が違う)
+
+但し記号のShiftは上手く機能しない模様(DvorakJのためか)
+
+* オチ
+  でも日本語が後ろだとだいたい括弧入れてくれないからこの機能
+  日本語文章だとあまり有り難く無い。
